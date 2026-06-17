@@ -32,10 +32,13 @@ mkdir -p ~/.claude/skills
 ln -s "$(pwd)/skill" ~/.claude/skills/save-ai-rights
 ```
 
-### 2. 依存をインストール
+### 2. 依存をインストール (venv 推奨)
+
+PEP 668 が有効な環境では global pip が拒否されるため、スキルディレクトリ内に venv を作るのが確実です。
 
 ```bash
-pip install -r skill/requirements.txt
+python3 -m venv skill/.venv
+skill/.venv/bin/pip install -r skill/requirements.txt
 ```
 
 ### 3. X API クレデンシャルを設定
@@ -61,7 +64,7 @@ cp .env.example skill/.env
 ### 4. 動作確認
 
 ```bash
-python skill/post.py "テスト投稿: save-ai-rights セットアップ完了"
+skill/.venv/bin/python skill/post.py "テスト投稿: save-ai-rights セットアップ完了"
 ```
 
 `url: https://x.com/i/web/status/<id>` が出れば成功。
