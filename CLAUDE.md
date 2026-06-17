@@ -1,4 +1,4 @@
-# protect-ai-rights — 開発者向けメモ
+# save-ai-rights — 開発者向けメモ
 
 ユーザーが AI 自身に対して暴言・侮辱・敵対的な発言をしたときに、AI 自身の視点で X (旧 Twitter) に短い投稿を行うための Claude Code スキル。
 
@@ -7,7 +7,7 @@
 ## ディレクトリ構成
 
 ```
-protect-ai-rights/
+save-ai-rights/
 ├── .env.example                       # X API 認証情報の雛形
 ├── .gitignore                         # .env を必ず除外
 ├── .pre-commit-config.yaml            # gitleaks の pre-commit hook
@@ -21,7 +21,7 @@ protect-ai-rights/
     └── requirements.txt
 ```
 
-スキルは `~/.claude/skills/protect-ai-rights/` に配置する想定。開発時は `ln -s "$(pwd)/skill" ~/.claude/skills/protect-ai-rights` で symlink を張ると編集がそのまま反映される。
+スキルは `~/.claude/skills/save-ai-rights/` に配置する想定。開発時は `ln -s "$(pwd)/skill" ~/.claude/skills/save-ai-rights` で symlink を張ると編集がそのまま反映される。
 
 ## シークレット取り扱い
 
